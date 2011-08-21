@@ -1,0 +1,4 @@
+Usage:
+./crawl.sh url.txt
+
+will list all links embedded in the pages at URLs in url.txt
