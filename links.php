@@ -1,5 +1,5 @@
 #!/usr/bin/php
-#
+<?PHP
 # Usage:
 # To extract links from a live site, simply supply the URL as a parameter
 # ./links.php http://www.boost.org
@@ -7,8 +7,7 @@
 # To extract links from a file, specify /f switch followed by a filename
 # and then by the URL (for relative URL building)
 # ./links.php /f boost.html http://www.boost.org
-#
-<?PHP
+
   require './http_build_url.php';
 
   # Original PHP code by Chirp Internet: www.chirp.com.au
@@ -155,7 +154,7 @@
       if (substr($match[2],0,5) != "'http")
         $link = InternetCombineURL($url,$link);
 
-      echo construct_url($link) . "\n"; // link address
+      echo $url . "\t" . construct_url($link) . "\n"; // link address
     }
   }
 ?>
